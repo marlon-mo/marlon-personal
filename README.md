@@ -1,1 +1,20 @@
 "# marlon-personal" 
+'''sql
+create table USER
+(
+	ID INTEGER default NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_AB372E1E_9AE5_4521_8ADF_EE1FD535E770"
+		primary key,
+	ACCOUNT_ID VARCHAR(100),
+	NAME VARCHAR(50),
+	TOKEN CHAR(36),
+	GMT_CREATE BIGINT,
+	GMT_MODIFIED BIGINT
+)
+;
+
+create unique index USER_ID_UINDEX
+	on USER (ID)
+;
+
+
+'''

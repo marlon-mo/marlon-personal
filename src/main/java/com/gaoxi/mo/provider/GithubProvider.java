@@ -25,7 +25,7 @@ public class GithubProvider {
             String res_str = response.body().string();
             System.out.println("the return res_str values is "+ res_str);
             String  token=res_str.split("&")[0].split("=")[1];
-            System.out.println("the return accesstoken values is "+ token);
+            //System.out.println("the return accesstoken values is "+ token);
             return token;
         } catch (Exception e) {
             e.printStackTrace();
@@ -42,7 +42,7 @@ public class GithubProvider {
                 .build();
         try (Response response = client.newCall(request).execute()) {
             String res_str = response.body().string();
-            System.out.println("the response string is " + res_str);
+            //System.out.println("the response string is " + res_str);
             com.gaoxi.mo.dto.GithubUser githubUser = JSON.parseObject(res_str, com.gaoxi.mo.dto.GithubUser.class);
             return githubUser;
         } catch (IOException e) {
